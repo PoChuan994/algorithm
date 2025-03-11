@@ -82,5 +82,10 @@ int main ()
     printf("The sorted list is \n");
     display(head);
 
+    while (head) {
+        Node *tmp = head;
+        head = head->next;
+        free(tmp);
+    }
     return 0;
 }
